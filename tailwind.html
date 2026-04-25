@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Tailwind</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+</head>
+<body class="bg-[#0f0f0f] text-white font-sans">
+
+  <!-- HEADER -->
+  <nav class="h-14 bg-[#0f0f0f] border-b border-[#272727] sticky top-0 z-50 px-3">
+    <div class="w-full h-full flex items-center justify-between">
+
+      <!-- LEFT -->
+      <div class="flex items-center gap-3">
+        <button class="w-10 h-10 rounded-full bg-transparent text-white hover:bg-[#272727] transition">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="flex items-center gap-2">
+          <i class="fa-brands fa-youtube text-red-600 text-3xl"></i>
+          <span class="text-white text-xl font-semibold">YouTube</span>
+        </div>
+      </div>
+
+      <!-- CENTER -->
+      <div class="flex items-center flex-1 justify-center px-3">
+        <div class="flex w-full max-w-[640px]">
+          <input
+            type="text"
+            placeholder="Rechercher"
+            class="flex-1 h-10 bg-[#121212] border border-[#303030] border-r-0 rounded-l-full px-4 text-white outline-none placeholder:text-[#aaa]"
+          >
+          <button class="w-16 h-10 border border-[#303030] rounded-r-full bg-[#222] text-white hover:bg-[#303030] flex items-center justify-center">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <button class="hidden md:flex ml-2 w-10 h-10 rounded-full bg-[#181818] text-white hover:bg-[#272727] items-center justify-center">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex items-center gap-2">
+        <button class="bg-[#272727] text-white rounded-full border-0 px-3 py-2 hover:bg-[#3a3a3a] flex items-center gap-2 w-9 h-9 sm:w-auto sm:h-auto sm:px-4 sm:py-2 justify-center">
+          <i class="fa-solid fa-plus"></i>
+          <span class="hidden sm:inline">Créer</span>
+        </button>
+
+        <button class="w-10 h-10 rounded-full bg-transparent text-white hover:bg-[#272727] transition">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+
+        <div class="w-8 h-8 rounded-full bg-[#e8dccf] text-[#6b4a2f] flex items-center justify-center font-bold text-sm">
+          A
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="flex">
+    <!-- SIDEBAR -->
+    <aside class="hidden md:block w-[240px] min-h-[calc(100vh-56px)] bg-[#0f0f0f] border-r border-[#272727] pt-3 px-3">
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-house w-6 text-center"></i>
+        <span>Accueil</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-bolt w-6 text-center"></i>
+        <span>Shorts</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-tv w-6 text-center"></i>
+        <span>Abonnements</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-regular fa-user w-6 text-center"></i>
+        <span>Vous</span>
+      </a>
+
+      <hr class="border-0 border-t border-[#272727] my-3">
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-clock-rotate-left w-6 text-center"></i>
+        <span>Historique</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-list w-6 text-center"></i>
+        <span>Playlists</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-regular fa-clock w-6 text-center"></i>
+        <span>À regarder plus tard</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-regular fa-thumbs-up w-6 text-center"></i>
+        <span>Vidéos "J'aime"</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-video w-6 text-center"></i>
+        <span>Vos vidéos</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-download w-6 text-center"></i>
+        <span>Téléchargements</span>
+      </a>
+
+      <hr class="border-0 border-t border-[#272727] my-3">
+
+      <p class="px-2 font-semibold text-white mb-2">Explorer</p>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-music w-6 text-center"></i>
+        <span>Musique</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-gamepad w-6 text-center"></i>
+        <span>Jeux vidéo</span>
+      </a>
+
+      <a href="#" class="flex items-center gap-4 px-3 py-2.5 rounded-[10px] mb-1 hover:bg-[#272727] text-white no-underline">
+        <i class="fa-solid fa-trophy w-6 text-center"></i>
+        <span>Sport</span>
+      </a>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="w-full md:flex-1 py-3 px-3 md:px-4">
+      <!--- TAGS --->
+      <div class="flex gap-2 overflow-x-auto mb-6 pb-1">
+        <button class="bg-white text-black font-semibold px-3.5 py-2 rounded-[10px] whitespace-nowrap">Tous</button>
+        <button class="bg-[#272727] text-white px-3.5 py-2 rounded-[10px] whitespace-nowrap">Musique</button>
+        <button class="bg-[#272727] text-white px-3.5 py-2 rounded-[10px] whitespace-nowrap">Programmation informatique</button>
+        <button class="bg-[#272727] text-white px-3.5 py-2 rounded-[10px] whitespace-nowrap">Podcasts</button>
+        <button class="bg-[#272727] text-white px-3.5 py-2 rounded-[10px] whitespace-nowrap">En direct</button>
+        <button class="bg-[#272727] text-white px-3.5 py-2 rounded-[10px] whitespace-nowrap">Mix</button>
+        <button class="bg-[#272727] text-white px-3.5 py-2 rounded-[10px] whitespace-nowrap">Confiance en soi</button>
+      </div>
+
+      <!-- VIDEOS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-7 gap-x-5">
+
+        <div>
+          <img src="https://picsum.photos/800/450?1" alt="thumbnail" class="w-full aspect-video object-cover rounded-2xl mb-3 block">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#444] shrink-0"></div>
+            <div class="min-w-0">
+              <div class="text-base font-semibold leading-[1.3] mb-1">mincraft 100% Free Unlimited</div>
+              <div class="text-sm text-[#aaa] mb-0.5">Nid Academy</div>
+              <div class="text-sm text-[#aaa]">12 k vues • il y a 1 j</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://picsum.photos/800/450?2" alt="thumbnail" class="w-full aspect-video object-cover rounded-2xl mb-3 block">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#444] shrink-0"></div>
+            <div class="min-w-0">
+              <div class="text-base font-semibold leading-[1.3] mb-1">Stop Making Ugly animations</div>
+              <div class="text-sm text-[#aaa] mb-0.5">WPDev</div>
+              <div class="text-sm text-[#aaa]">83 k vues • il y a 7 j</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://picsum.photos/800/450?3" alt="thumbnail" class="w-full aspect-video object-cover rounded-2xl mb-3 block">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#444] shrink-0"></div>
+            <div class="min-w-0">
+              <div class="text-base font-semibold leading-[1.3] mb-1">english For Beginners</div>
+              <div class="text-sm text-[#aaa] mb-0.5">Rayen Mehrez</div>
+              <div class="text-sm text-[#aaa]">1,2 k vues • il y a 3 j</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://picsum.photos/800/450?4" alt="thumbnail" class="w-full aspect-video object-cover rounded-2xl mb-3 block">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#444] shrink-0"></div>
+            <div class="min-w-0">
+              <div class="text-base font-semibold leading-[1.3] mb-1">photoshop : de zéro à expert</div>
+              <div class="text-sm text-[#aaa] mb-0.5">Arabic Dev</div>
+              <div class="text-sm text-[#aaa]">95 k vues • il y a 5 j</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://picsum.photos/800/450?5" alt="thumbnail" class="w-full aspect-video object-cover rounded-2xl mb-3 block">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#444] shrink-0"></div>
+            <div class="min-w-0">
+              <div class="text-base font-semibold leading-[1.3] mb-1">n8n is GOLD!</div>
+              <div class="text-sm text-[#aaa] mb-0.5">AI Design Lab</div>
+              <div class="text-sm text-[#aaa]">48 k vues • il y a 2 sem.</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://picsum.photos/800/450?6" alt="thumbnail" class="w-full aspect-video object-cover rounded-2xl mb-3 block">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#444] shrink-0"></div>
+            <div class="min-w-0">
+              <div class="text-base font-semibold leading-[1.3] mb-1">IBM IT Support - Complete Course</div>
+              <div class="text-sm text-[#aaa] mb-0.5">Pro Learn</div>
+              <div class="text-sm text-[#aaa]">210 k vues • il y a 1 mois</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
